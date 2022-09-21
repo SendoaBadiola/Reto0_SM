@@ -3,16 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javafxapp.controller;
+package javafxapp.view;
 
-import javafxapp.model.Greeting;
+import exceptions.ExceptionManager;
 
 /**
  *
  * @author 2dam
  */
-public interface ModelInterface {
-    
-    public Greeting getGreetingObject();
+public class FileViewImplementation implements ViewInterface{
+
+    @Override
+    public void showGreeting(String s) throws ExceptionManager {
+        
+    }
     
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javafxapp.ui;
+package javafxapp.view;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -17,8 +17,8 @@ import javafx.stage.Stage;
  *
  * @author 2dam
  */
-public class JavaFX extends Application {
-    
+public class JavaFX {
+  /*  
     @Override
     public void start(Stage primaryStage) {
         Button btn = new Button();
@@ -40,5 +40,5 @@ public class JavaFX extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-    
+    */
 }

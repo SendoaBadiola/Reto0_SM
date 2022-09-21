@@ -1,4 +1,4 @@
-package javafxapp.controller;
+package javafxapp.model;
 
 import exceptions.ExceptionManager;
 import java.sql.Connection;

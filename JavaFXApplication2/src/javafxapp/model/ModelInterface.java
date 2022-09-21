@@ -5,20 +5,15 @@
  */
 package javafxapp.model;
 
+import exceptions.ExceptionManager;
+
+
 /**
  *
  * @author 2dam
  */
-public class Greeting {
+public interface ModelInterface {
     
-    private String greeting;
-
-    public String getGreeting() {
-        return greeting;
-    }
-
-    public void setGreeting(String greeting) {
-        this.greeting = greeting;
-    }
+    public String getGreeting() throws ExceptionManager;
     
 }
