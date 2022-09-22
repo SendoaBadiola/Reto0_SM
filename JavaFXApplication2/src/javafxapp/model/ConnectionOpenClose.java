@@ -17,7 +17,7 @@ public class ConnectionOpenClose {
     protected PreparedStatement stmt;
 
     public ConnectionOpenClose() {
-        configFile = ResourceBundle.getBundle("controlador/config");
+        configFile = ResourceBundle.getBundle("javafxapp.model.Config");
         url = configFile.getString("URL");
         user = configFile.getString("USER");
         pass = configFile.getString("PASSWORD");
