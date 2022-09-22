@@ -10,9 +10,9 @@ package javafxapp.view;
  * @author 2dam
  */
 public class ViewFactory {
-    private static ViewInterface data;
+    private ViewInterface data;
     
-    public static ViewInterface getView() {
+    public ViewInterface getView() {
         if (data==null){
             data = new TextViewImplementation();
         }

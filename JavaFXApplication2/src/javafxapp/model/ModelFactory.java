@@ -5,16 +5,28 @@
  */
 package javafxapp.model;
 
+import java.util.ResourceBundle;
+
 /**
  *
  * @author 2dam
  */
 public class ModelFactory {
-    private static ModelInterface data;
+    private ModelInterface data;
+    private ResourceBundle configFile;
+    private String model;
     
-    public static ModelInterface getModel() {
-        if (data==null){
-            data = new ModelDBImplementation();
+    public ModelInterface getModel() {
+        configFile = ResourceBundle.getBundle("javafxapp.model.Config");
+        model = configFile.getString("MODEL");
+        if (model.equalsIgnoreCase("db")) {
+            if (data==null){
+                data = new ModelDBImplementation();
+            }
+        } else if(model.equalsIgnoreCase("file")){
+            if (data==null){
+                data = new ModelFileImplementation();
+            }
         }
         return data;
     }

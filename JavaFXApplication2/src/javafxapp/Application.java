@@ -18,16 +18,19 @@ import javafxapp.view.ViewInterface;
  */
 public class Application {
     
-    private static ModelInterface mIf;
-    private static ViewInterface vIf;
-    private static Controller runeable;
-    
     /**
      * @param args the command line arguments
+     * @throws exceptions.ExceptionManager
      */
     public static void main(String[] args) throws ExceptionManager {
-        mIf = ModelFactory.getModel();
-        vIf = ViewFactory.getView();
+        ModelInterface mIf;
+        ViewInterface vIf;
+        Controller runeable = new Controller();
+        ModelFactory mOf = new ModelFactory();
+        ViewFactory vOf = new ViewFactory();
+        
+        mIf = mOf.getModel();
+        vIf = vOf.getView();
         runeable.run(mIf, vIf);
     }
     
