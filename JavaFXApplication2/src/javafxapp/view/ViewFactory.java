@@ -5,16 +5,28 @@
  */
 package javafxapp.view;
 
+import java.util.ResourceBundle;
+
 /**
  *
  * @author 2dam
  */
 public class ViewFactory {
     private ViewInterface data;
+    private ResourceBundle configFile;
+    private String ui;
     
     public ViewInterface getView() {
-        if (data==null){
-            data = new TextViewImplementation();
+        configFile = ResourceBundle.getBundle("javafxapp.model.Config");
+        ui = configFile.getString("UI");
+       if (ui.equalsIgnoreCase("text")) {
+            if (data==null){
+                data = new TextViewImplementation();
+            }
+        } else if(ui.equalsIgnoreCase("javafx")){
+            if (data==null){
+                data = new UIViewImplementation();
+            }
         }
         return data;
     }

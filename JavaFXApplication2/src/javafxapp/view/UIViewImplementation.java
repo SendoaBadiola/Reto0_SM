@@ -5,39 +5,43 @@
  */
 package javafxapp.view;
 
+
+import exceptions.ExceptionManager;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import static javafx.application.Application.*;
+
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
+
+
 
 /**
  *
  * @author 2dam
  */
-public class JavaFX {
+public class UIViewImplementation extends Application implements ViewInterface {
     
     public void start(Stage primaryStage) {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
+        String parameter;
+        parameter = getParameters().getRaw().get(0);
+        Text text = new Text(parameter);
         
         StackPane root = new StackPane();
-        root.getChildren().add(btn);
+        root.getChildren().add(text);
         
         Scene scene = new Scene(root, 300, 250);
         
-        primaryStage.setTitle("Hello World!");
+        primaryStage.setTitle(parameter);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
     
+    @Override
+    public void showGreeting(String greeting) throws ExceptionManager {
+        launch(greeting);
+        
+    }
 }
