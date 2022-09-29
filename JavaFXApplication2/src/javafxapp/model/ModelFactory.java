@@ -8,8 +8,8 @@ package javafxapp.model;
 import java.util.ResourceBundle;
 
 /**
- *
  * @author 2dam
+ * Here using the properties file we can choose if we want to use the Data Base or the File to get the greeting message
  */
 public class ModelFactory {
     private ModelInterface data;

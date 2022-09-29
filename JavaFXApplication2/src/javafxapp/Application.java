@@ -5,7 +5,7 @@
  */
 package javafxapp;
 
-import exceptions.ExceptionManager;
+import javafxapp.exceptions.ExceptionManager;
 import javafxapp.controller.Controller;
 import javafxapp.model.ModelFactory;
 import javafxapp.model.ModelInterface;
@@ -20,7 +20,7 @@ public class Application {
     
     /**
      * @param args the command line arguments
-     * @throws exceptions.ExceptionManager
+     * @throws javafxapp.exceptions.ExceptionManager
      */
     public static void main(String[] args) throws ExceptionManager {
         ModelInterface mIf;

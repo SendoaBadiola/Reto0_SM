@@ -6,7 +6,7 @@
 package javafxapp.view;
 
 
-import exceptions.ExceptionManager;
+import javafxapp.exceptions.ExceptionManager;
 import javafx.application.Application;
 import static javafx.application.Application.*;
 
@@ -19,8 +19,8 @@ import javafx.stage.Stage;
 
 
 /**
- *
  * @author 2dam
+ * method to use a javaFX window to show the message
  */
 public class UIViewImplementation extends Application implements ViewInterface {
     

@@ -5,12 +5,11 @@
  */
 package javafxapp.controller;
 
-import exceptions.ExceptionManager;
+import javafxapp.exceptions.ExceptionManager;
 import javafxapp.model.ModelInterface;
 import javafxapp.view.ViewInterface;
 
 /**
- *
  * @author 2dam
  */
 public class Controller {

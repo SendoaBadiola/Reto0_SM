@@ -8,8 +8,8 @@ package javafxapp.view;
 import java.util.ResourceBundle;
 
 /**
- *
  * @author 2dam
+ * Here using the properties file we can choose if we want to show the message using terminal or a javaFX window
  */
 public class ViewFactory {
     private ViewInterface data;

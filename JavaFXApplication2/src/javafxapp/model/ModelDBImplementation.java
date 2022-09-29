@@ -5,7 +5,7 @@
  */
 package javafxapp.model;
 
-import exceptions.ExceptionManager;
+import javafxapp.exceptions.ExceptionManager;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,8 +13,8 @@ import java.sql.SQLException;
 
 
 /**
- *
  * @author 2dam
+ * method to get the greeting message using Data Base
  */
 public class ModelDBImplementation implements ModelInterface {
     private Connection con;

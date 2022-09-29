@@ -5,7 +5,7 @@
  */
 package javafxapp.model;
 
-import exceptions.ExceptionManager;
+import javafxapp.exceptions.ExceptionManager;
 
 
 /**

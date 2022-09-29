@@ -5,38 +5,23 @@
  */
 package javafxapp.model;
 
-import exceptions.ExceptionManager;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.ObjectInputStream;
-import java.nio.charset.StandardCharsets;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javafxapp.exceptions.ExceptionManager;
+import java.util.ResourceBundle;
 
 /**
- *
  * @author 2dam
+ * method to get the greeting message using File
  */
 public class ModelFileImplementation implements ModelInterface {
 
+    private ResourceBundle configFile;
+    private String greeting;
+    
     @Override
     public String getGreeting() throws ExceptionManager {
-        File file = new File("src\\javafxapp\\model\\greeting.txt");
-        BufferedReader br;
-        String greeting = null;
+        configFile = ResourceBundle.getBundle("javafxapp.model.Config");
+        greeting = configFile.getString("GREETING");
 
-        try {
-            br = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
-            greeting = br.readLine();
-        } catch (FileNotFoundException ex) {
-            System.out.println("Error, no se ha encontrado el fichero");
-        } catch (IOException ex) {
-            System.out.println("Error en la lectura del fichero");
-        }
         return greeting;
     }
 

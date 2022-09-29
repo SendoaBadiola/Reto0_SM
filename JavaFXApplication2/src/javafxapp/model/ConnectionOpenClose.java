@@ -1,12 +1,15 @@
 package javafxapp.model;
 
-import exceptions.ExceptionManager;
+import javafxapp.exceptions.ExceptionManager;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+/**
+ * @author 2dam
+ */
 public class ConnectionOpenClose {
 
     protected ResourceBundle configFile;
@@ -23,6 +26,7 @@ public class ConnectionOpenClose {
         pass = configFile.getString("PASSWORD");
     }
 
+    // Method to open a connection with the DB
     public Connection openConnection() throws ExceptionManager {
         Connection con = null;
         try {
@@ -33,6 +37,7 @@ public class ConnectionOpenClose {
         return con;
     }
 
+    // Method to close connection with the DB
     public void closeConnection(PreparedStatement stmt, Connection con) throws SQLException {
         if (stmt != null) {
             stmt.close();

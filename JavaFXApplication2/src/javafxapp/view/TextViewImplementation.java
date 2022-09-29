@@ -5,11 +5,11 @@
  */
 package javafxapp.view;
 
-import exceptions.ExceptionManager;
+import javafxapp.exceptions.ExceptionManager;
 
 /**
- *
  * @author 2dam
+ * method to use terminal to show the message
  */
 public class TextViewImplementation implements ViewInterface {
 
